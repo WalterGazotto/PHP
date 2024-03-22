@@ -29,6 +29,13 @@
 
         $name = (float) "900";
         var_dump($name);
+
+    // Para uma variavel boleana, quando solicitado para escrever na tela com ECHO ou PRINT o valor TRUE é = 1 e o valor FALSE é = vazio
+        $casado = true; 
+        echo "O valor para casado é $casado ";
+
+    // Já o var_dump mostra se é verdadeiro ou falso
+        var_dump($casado);
     ?>
 </body>
 </html>
