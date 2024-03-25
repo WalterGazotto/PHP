@@ -9,4 +9,6 @@
     //
     //
     //
-    echo "Muito prazer, meu nome é $nome $sobrenome! E eu moro no " . PAIS;
+    //echo "Muito prazer, meu nome é $nome $sobrenome! E eu moro no " . PAIS  ;
+    
+    echo "  2" + "2";
