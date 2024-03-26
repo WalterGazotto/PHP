@@ -10,15 +10,15 @@
     <main>
     <h1>ResultadoFinal</h1>
         <?php 
-            $valor = $_GET["numero"];
-            $valormaior = $valor + 1;
-            $valormenor = $valor - 1;
+            $valor = $_GET["numero"] ?? 0;
+            $valormaior = $valor + 1; 
 
-            echo "O nuémero escolhido foi <strong>$valor</strong> <br>O seu antecessor é $valormenor <br>O seu sucessor é $valormaior";
-
-            echo "<br>"
+            echo "O nuémero escolhido foi <strong>$valor</strong> <br>"; 
+            echo "O seu <em>antecessor é ". $valor - 1 ."<br>"; // Aqui foi contatenado o valor ja realizando a conta diretamente (economia de memoria).
+            echo "O seu <em>sucessor é $valormaior<br>"; // Já no segundo resultado foi declarada a variavel e esta passando somente o valor do resultado.
+            
         ?>
-        <input type="button" value="Voltar" onclick="window.location.href = 'index.html';">
+        <button onclick="javascript:history.go(-1)">&#x2B05 Voltar</button>
     </main>
 </body>
 </html>
