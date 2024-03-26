@@ -18,7 +18,7 @@
 
             echo "<br>"
         ?>
-        <a href="index.html">Voltar</a>
+        <input type="button" value="Voltar" onclick="window.location.href = 'index.html';">
     </main>
 </body>
 </html>
