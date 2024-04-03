@@ -10,10 +10,16 @@
     <main>
         <h1>Conversor de Dolar v1.0</h1>
         <?php 
-        $real = $_GET["real"];
+        $real = $_GET["real"] ?? 0;
         $dolar = number_format($real / 4.99, 2);
-            echo "Sues R$ $real equivalem a <strong>U$ $dolar </strong><br>";
-            echo "<strong>Cotação Fixa de R$ 4.99</strong> informada diretamente no código.<br>";
+            //Formatação Tradicional
+            //echo "Seus R\$" . number_format($real, 2, ",", ".") . " equivalem a <strong>US\$ " . number_format($dolar, 2) ."</strong><br>";
+
+            //Formatação de moedas com internacionalização
+            $padrao = numfmt_create("pt_BR" , NumberFormatter::CURRENCY);
+
+            echo "Seus " . numfmt_format_currency($padrao, $real, "BLR") . " equivalem a " . numfmt_format_currency($padrao, $dolar, "USD");
+            echo "<strong><br>Cotação Fixa de R$ 4.99</strong> informada diretamente no código.<br>";
         ?>
         
         <input type="button" value="voltar" onclick="window.location.href = 'index.html';">

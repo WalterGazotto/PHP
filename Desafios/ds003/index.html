@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
+    <main>
         <h1>Conversor: Real para Dolar</h1>
+        <p>Cota fixa: R$4.99</p>
         <form action="conversor.php" method="get">
             <label for="conversor">Quantos R$ você tem na carteira?</label>
-            <input type="number" name="real" id="idreal">
+            <input type="number" name="real" id="idreal" step="0.01">
             <input type="submit" value="Converter">
         </form>
-    </section>
+    </main>
 </body>
 </html>
