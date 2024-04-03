@@ -7,18 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
+    <main>
         <h1>Trabalhando com números aleatórios</h1>
         <p>Gerando um número aleatorio entre 0 e 100</p>
         <?php 
-            if(isset($_POST['gerar'])) {
-                $numero_aleatorio = rand(0, 100);
-                echo "<p>O valor gerado foi <strong>$numero_aleatorio</strong></p>";
-            }
+            $valor = mt_rand(0, 100);
+            echo "O número aleatório é : <strong>$valor";
         ?>
-        <form method="post">
-            <input type="submit" name="gerar" value="Gerar Número Aleatório">
-        </form>
-    </section>
+        <button onclick="javascript:document.location.reload()">&#x1F504; Gerar número</button>
+        </main>
 </body>
 </html>
